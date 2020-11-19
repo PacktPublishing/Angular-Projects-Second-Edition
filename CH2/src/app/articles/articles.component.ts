@@ -4,7 +4,7 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.css']
+  styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
 
