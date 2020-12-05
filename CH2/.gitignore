@@ -42,6 +42,8 @@ testem.log
 /typings
 scully.log
 /.scully
+/scully/**/*.js
+/scully/**/*.js.map
 
 # System Files
 .DS_Store
