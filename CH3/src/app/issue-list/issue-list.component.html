@@ -1,0 +1,19 @@
+<clr-datagrid>
+  <clr-dg-column [clrDgField]="'issueNo'" [clrDgColType]="'number'">Issue No</clr-dg-column>
+  <clr-dg-column [clrDgField]="'type'">Type</clr-dg-column>
+  <clr-dg-column [clrDgField]="'title'">Title</clr-dg-column>
+  <clr-dg-column [clrDgField]="'description'">Description</clr-dg-column>
+  <clr-dg-column [clrDgField]="'priority'">Priority</clr-dg-column>
+
+  <clr-dg-row *clrDgItems="let issue of issues">
+    <clr-dg-cell>{{issue.issueNo}}</clr-dg-cell>
+    <clr-dg-cell>{{issue.type}}</clr-dg-cell>
+    <clr-dg-cell>{{issue.title}}</clr-dg-cell>
+    <clr-dg-cell>{{issue.description}}</clr-dg-cell>
+    <clr-dg-cell>
+      <span class="label" [class.label-danger]="issue.priority === 'high'">{{issue.priority}}</span>
+    </clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>{{issues.length}} issues</clr-dg-footer>
+</clr-datagrid>
