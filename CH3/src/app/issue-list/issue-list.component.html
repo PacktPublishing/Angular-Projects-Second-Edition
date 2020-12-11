@@ -20,4 +20,4 @@
     <clr-dg-footer>{{issues.length}} issues</clr-dg-footer>
   </clr-datagrid>
 </ng-container>
-<app-issue-report *ngIf="showReportIssue == true" (close)="onCloseReport()"></app-issue-report>
+<app-issue-report *ngIf="showReportIssue == true" (formClose)="onCloseReport()"></app-issue-report>
