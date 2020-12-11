@@ -19,12 +19,12 @@
     "@angular/platform-browser": "~11.0.0",
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
-    "@clr/angular": "4.0.7",
+    "@clr/angular": "4.0.8",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2",
-    "@clr/ui": "4.0.7",
-    "@clr/icons": "4.0.7",
+    "@clr/ui": "4.0.8",
+    "@clr/icons": "4.0.8",
     "@webcomponents/webcomponentsjs": "^2.0.0"
   },
   "devDependencies": {
