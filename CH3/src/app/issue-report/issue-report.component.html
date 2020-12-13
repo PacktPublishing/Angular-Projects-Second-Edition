@@ -5,6 +5,18 @@
     <input clrInput formControlName="title" />
     <clr-control-error>Title is required</clr-control-error>
   </clr-input-container>
+  <div class="clr-row" *ngIf="suggestions">
+    <div class="clr-col-lg-2"></div>
+    <div class="clr-col-lg-6">
+      <clr-stack-view>
+        <clr-stack-header>Similar issues</clr-stack-header>
+        <clr-stack-block *ngFor="let issue of suggestions">
+          <clr-stack-label>{{issue.title}}</clr-stack-label>
+          <clr-stack-content>{{issue.description}}</clr-stack-content>
+        </clr-stack-block>
+      </clr-stack-view>
+    </div>
+  </div>
   <clr-textarea-container>
     <label>Description</label>
     <textarea clrTextarea formControlName="description"></textarea>
