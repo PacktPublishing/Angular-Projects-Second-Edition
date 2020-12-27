@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 25px;
+}
+
+mat-form-field {
+  width: 20%;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
+mat-card {
+  margin-top: 30px;
+  width: 250px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
