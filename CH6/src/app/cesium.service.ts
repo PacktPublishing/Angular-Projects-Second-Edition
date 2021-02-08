@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Viewer, Cartesian3, PinBuilder, Color } from 'cesium';
-import { Photo } from './photo';
-import { map } from 'rxjs/operators';
+import { Cartesian3, Color, PinBuilder, Viewer } from 'cesium';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Photo } from './photo';
 
 @Injectable({
   providedIn: 'root'
