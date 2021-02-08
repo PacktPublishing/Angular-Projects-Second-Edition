@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { ViewPageRoutingModule } from './view-routing.module';
 
 import { ViewPage } from './view.page';
-import { CesiumDirective } from './cesium.directive';
 
 @NgModule({
   imports: [
@@ -16,6 +15,6 @@ import { CesiumDirective } from './cesium.directive';
     IonicModule,
     ViewPageRoutingModule
   ],
-  declarations: [ViewPage, CesiumDirective]
+  declarations: [ViewPage]
 })
 export class ViewPageModule {}
