@@ -1,0 +1,34 @@
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar i {
+  font-size: 2rem;
+  color: white;
+  margin: 0 16px;
+}
+
+.toolbar a {
+  margin-bottom: 5px;
+}
+
+.toolbar i:hover {
+  opacity: 0.8;
+}
