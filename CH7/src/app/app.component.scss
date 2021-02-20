@@ -1,15 +1,5 @@
-.spacer {
-  flex: 1;
-}
-
 .toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 60px;
-  display: flex;
-  align-items: center;
   background-color: #1976d2;
   color: white;
   font-weight: 600;
@@ -20,7 +10,7 @@
 }
 
 .toolbar i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   margin: 0 16px;
 }
@@ -31,4 +21,9 @@
 
 .toolbar i:hover {
   opacity: 0.8;
+}
+
+.content {
+  margin: 82px auto 32px;
+  padding: 0 16px;
 }
