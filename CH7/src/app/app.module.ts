@@ -5,12 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { OrganizationsComponent } from './organizations/organizations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalInfoComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    OrganizationsComponent
   ],
   imports: [
     BrowserModule,

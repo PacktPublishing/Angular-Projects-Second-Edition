@@ -11,13 +11,13 @@ import { Repository } from '../repository';
 })
 export class RepositoriesComponent implements OnInit {
 
-  repositories$: Observable<Repository[]>;
+  repos$: Observable<Repository[]>;
 
   constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
-    this.repositories$ = this.githubService.getRepositories().pipe(
-      map(repos => repos.filter(repo => repo.fork === false))
+    this.repos$ = this.githubService.getRepos().pipe(
+      map(repos => repos.filter(repo => !repo.fork))
     );
   }
 
