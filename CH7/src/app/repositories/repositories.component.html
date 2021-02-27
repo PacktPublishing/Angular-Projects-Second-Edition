@@ -1,23 +1,25 @@
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col p-2" *ngFor="let repo of repos$ | async">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">
-          <a [href]="repo.html_url">{{repo.name}}</a>
-        </h5>
-        <p class="card-text">{{repo.description}}</p>
+<app-panel caption="Repositories" icon="archive">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col p-2" *ngFor="let repo of repos$ | async">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a [href]="repo.html_url">{{repo.name}}</a>
+          </h5>
+          <p class="card-text">{{repo.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush list-group-horizontal">
+          <li class="list-group-item border-0">
+            <i class="bi-code mr-2"></i>{{repo.language}}
+          </li>
+          <li class="list-group-item border-0">
+            <i class="bi-star mr-2"></i>{{repo.stargazers_count}}
+          </li>
+          <li class="list-group-item border-0">
+            <i class="bi-diagram-2 mr-2"></i>{{repo.forks_count}}
+          </li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush list-group-horizontal">
-        <li class="list-group-item border-0">
-          <i class="bi-code mr-2"></i>{{repo.language}}
-        </li>
-        <li class="list-group-item border-0">
-          <i class="bi-star mr-2"></i>{{repo.stargazers_count}}
-        </li>
-        <li class="list-group-item border-0">
-          <i class="bi-bezier2 mr-2"></i>{{repo.forks_count}}
-        </li>
-      </ul>
     </div>
   </div>
-</div>
+</app-panel>
