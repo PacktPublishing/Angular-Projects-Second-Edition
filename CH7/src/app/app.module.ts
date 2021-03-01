@@ -17,7 +17,7 @@ import { PanelComponent } from './panel/panel.component';
     PanelComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule
   ],
   providers: [],
