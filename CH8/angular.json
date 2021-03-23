@@ -142,6 +142,31 @@
           }
         }
       }
+    },
+    "visitor": {
+      "projectType": "library",
+      "root": "libs/visitor",
+      "sourceRoot": "libs/visitor/src",
+      "prefix": "packt",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/visitor/src/**/*.ts",
+              "libs/visitor/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/visitor"],
+          "options": {
+            "jestConfig": "libs/visitor/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
