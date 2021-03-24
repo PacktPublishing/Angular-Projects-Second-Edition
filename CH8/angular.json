@@ -48,7 +48,10 @@
             "tsConfig": "apps/tour/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/tour/src/favicon.ico", "apps/tour/src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/tour/src/styles.css"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "apps/tour/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -163,6 +166,31 @@
           "outputs": ["coverage/libs/visitor"],
           "options": {
             "jestConfig": "libs/visitor/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "admin": {
+      "projectType": "library",
+      "root": "libs/admin",
+      "sourceRoot": "libs/admin/src",
+      "prefix": "packt",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/src/**/*.ts",
+              "libs/admin/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin"],
+          "options": {
+            "jestConfig": "libs/admin/jest.config.js",
             "passWithNoTests": true
           }
         }

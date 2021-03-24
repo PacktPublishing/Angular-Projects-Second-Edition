@@ -18,6 +18,7 @@
   "projects": {
     "tour": { "tags": [] },
     "tour-e2e": { "tags": [], "implicitDependencies": ["tour"] },
-    "visitor": { "tags": [] }
+    "visitor": { "tags": [] },
+    "admin": { "tags": [] }
   }
 }

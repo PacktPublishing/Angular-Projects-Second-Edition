@@ -9,8 +9,9 @@ import { RouterModule } from '@angular/router';
   declarations: [AppComponent],
   imports: [BrowserModule, BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: '', pathMatch: 'full', redirectTo: 'tour' },
-      { path: 'tour', loadChildren: () => import('@packt/visitor').then(m => m.VisitorModule) }
+      { path: 'admin', loadChildren: () => import('@packt/admin').then(m => m.AdminModule) },
+      { path: 'tour', loadChildren: () => import('@packt/visitor').then(m => m.VisitorModule) },
+      { path: '', pathMatch: 'full', redirectTo: 'tour' }
     ])
   ],
   providers: [],
