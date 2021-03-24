@@ -48,7 +48,7 @@
             "tsConfig": "apps/tour/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/tour/src/favicon.ico", "apps/tour/src/assets"],
-            "styles": ["apps/tour/src/styles.css"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/tour/src/styles.css"],
             "scripts": []
           },
           "configurations": {
