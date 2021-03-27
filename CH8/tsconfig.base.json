@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@packt/visitor": ["libs/visitor/src/index.ts"],
-      "@packt/admin": ["libs/admin/src/index.ts"]
+      "@packt/admin": ["libs/admin/src/index.ts"],
+      "@packt/poi": ["libs/poi/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

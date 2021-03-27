@@ -19,6 +19,7 @@
     "tour": { "tags": [] },
     "tour-e2e": { "tags": [], "implicitDependencies": ["tour"] },
     "visitor": { "tags": [] },
-    "admin": { "tags": [] }
+    "admin": { "tags": [] },
+    "poi": { "tags": [] }
   }
 }
