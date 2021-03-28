@@ -1,3 +1,3 @@
 <mat-action-list *ngFor="let poi of pois$ | async">
-  <button mat-list-item>{{poi.title}}</button>
+  <button mat-list-item (click)="selectPoi(poi)">{{poi.title}}</button>
 </mat-action-list>

@@ -7,4 +7,5 @@ export interface PoiEntity {
   lng: number;
   title: string;
   description: string;
+  imgUrl: string;
 }
