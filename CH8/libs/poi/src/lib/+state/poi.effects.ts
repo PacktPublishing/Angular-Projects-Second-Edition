@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import * as PoiFeature from './poi.reducer';
 import * as PoiActions from './poi.actions';
 import { PoiService } from '../poi.service';
+import { EMPTY } from 'rxjs';
 
 @Injectable()
 export class PoiEffects {
@@ -23,6 +24,20 @@ export class PoiEffects {
           console.error('Error', error);
           return PoiActions.loadPoiFailure({ error });
         },
+      })
+    )
+  );
+
+  visit$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(PoiActions.visitPoi),
+      fetch({
+        run: action => {
+          const stat = localStorage.getItem('tour-' + action.poiId);
+          const total = stat ? Number(stat) + 1 : 0;
+          localStorage.setItem('tour-' + action.poiId, total.toString());
+          return EMPTY;
+        }
       })
     )
   );

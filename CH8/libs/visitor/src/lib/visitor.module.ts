@@ -13,6 +13,7 @@ import { PoiModule } from '@packt/poi';
 import { PoiListComponent } from './poi-list/poi-list.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './map/map.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [CommonModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
@@ -20,7 +21,8 @@ import { MapComponent } from './map/map.component';
       { path: '', component: VisitorComponent }
     ]),
     PoiModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatCardModule
   ],
   declarations: [VisitorComponent, PoiListComponent, MapComponent],
 })

@@ -17,3 +17,8 @@ export const selectPoi = createAction(
   '[Poi/API] Select Poi',
   props<{ poiId: string | number }>()
 );
+
+export const visitPoi = createAction(
+  '[Poi/API] Visit Poi',
+  props<{ poiId: string | number }>()
+)
