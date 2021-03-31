@@ -12,10 +12,10 @@ import { AdminService } from './admin.service';
 })
 export class AdminComponent implements OnInit, OnDestroy {
 
+  private subscription: Subscription;
+
   data: number[];
   labels: Label[];
-
-  private subscription: Subscription;
 
   constructor(private store: Store, private adminService: AdminService) { }
 
