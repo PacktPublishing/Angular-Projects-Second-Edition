@@ -34,7 +34,7 @@ export class PoiEffects {
       fetch({
         run: action => {
           const stat = localStorage.getItem('tour-' + action.poiId);
-          const total = stat ? Number(stat) + 1 : 0;
+          const total = stat ? Number(stat) + 1 : 1;
           localStorage.setItem('tour-' + action.poiId, total.toString());
           return EMPTY;
         }

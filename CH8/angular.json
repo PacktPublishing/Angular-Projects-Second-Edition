@@ -52,7 +52,8 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "apps/tour/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": ["chart.js"]
           },
           "configurations": {
             "production": {
