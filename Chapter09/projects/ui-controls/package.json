@@ -1,0 +1,13 @@
+{
+  "name": "ui-controls",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.2.8",
+    "@angular/core": "^11.2.8",
+    "@angular/cdk": "^11.2.8",
+    "bulma": "^0.9.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bulma/css/bulma.css"
             ],
             "scripts": []
           },
@@ -115,6 +116,46 @@
             "production": {
               "devServerTarget": "my-components:serve:production"
             }
+          }
+        }
+      }
+    },
+    "ui-controls": {
+      "projectType": "library",
+      "root": "projects/ui-controls",
+      "sourceRoot": "projects/ui-controls/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ui-controls/tsconfig.lib.json",
+            "project": "projects/ui-controls/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ui-controls/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ui-controls/src/test.ts",
+            "tsConfig": "projects/ui-controls/tsconfig.spec.json",
+            "karmaConfig": "projects/ui-controls/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ui-controls/tsconfig.lib.json",
+              "projects/ui-controls/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
