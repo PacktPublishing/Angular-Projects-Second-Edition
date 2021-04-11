@@ -1,0 +1,9 @@
+:host > div {
+  display: grid;
+  grid-auto-flow: column;
+  overflow: auto;
+}
+
+.card {
+  width: 200px;
+}

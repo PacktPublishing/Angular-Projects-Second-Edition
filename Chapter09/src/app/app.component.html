@@ -1,4 +1,4 @@
 <div class="container is-fluid">
   <h1 class="title">Assassins Creed Series</h1>
-  <lib-card-list [cards]="cards"></lib-card-list>
+  <lib-card-list [cards]="cards" (cardChange)="onCardChange($event)"></lib-card-list>
 </div>

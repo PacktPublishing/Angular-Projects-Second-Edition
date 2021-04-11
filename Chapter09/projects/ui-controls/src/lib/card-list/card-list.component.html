@@ -1,11 +1,13 @@
-<div class="card m-4" *ngFor="let card of cards">
-  <header class="card-header">
-    <p class="card-header-title">{{card.title}}</p>
-  </header>
-  <div class="card-content">
-    <div class="content">{{card.description}}</div>
+<div cdkDropListOrientation="horizontal" cdkDropList (cdkDropListDropped)="sortCards($event)">
+  <div cdkDrag class="card m-4" *ngFor="let card of cards">
+    <header class="card-header">
+      <p class="card-header-title">{{card.title}}</p>
+    </header>
+    <div class="card-content">
+      <div class="content">{{card.description}}</div>
+    </div>
+    <footer class="card-footer">
+      <a [href]="card.link" class="card-footer-item">View on Wikipedia</a>
+    </footer>
   </div>
-  <footer class="card-footer">
-    <a [href]="card.link" class="card-footer-item">View on Wikipedia</a>
-  </footer>
 </div>
