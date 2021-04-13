@@ -1,4 +1,13 @@
 <div class="container is-fluid">
   <h1 class="title">Assassins Creed Series</h1>
   <lib-card-list [cards]="cards" (cardChange)="onCardChange($event)"></lib-card-list>
+  <h1 class="title mt-5">Clipboard interaction</h1>
+  <div class="field has-addons">
+    <div class="control">
+      <input class="input" type="text" [(ngModel)]="title">
+    </div>
+    <div class="control">
+      <lib-copy-button [data]="title" (copied)="log()"></lib-copy-button>
+    </div>
+  </div>
 </div>

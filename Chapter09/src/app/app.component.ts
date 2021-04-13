@@ -14,4 +14,8 @@ export class AppComponent {
   onCardChange(cards: Card[]): void {
     console.log(cards);
   }
+
+  log() {
+    alert(this.title + ' copied to the clipboard');
+  }
 }
