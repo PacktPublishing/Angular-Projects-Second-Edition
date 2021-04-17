@@ -15,7 +15,7 @@ export class AppComponent {
     console.log(cards);
   }
 
-  log() {
+  log(): void {
     alert(this.title + ' copied to the clipboard');
   }
 }
