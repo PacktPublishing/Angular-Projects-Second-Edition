@@ -9,6 +9,10 @@
       "description": "Generate a Tailwind container component",
       "factory": "./tailwind-container/index#tailwindContainer",
       "schema": "./tailwind-container/schema.json"
+    },
+    "crud-service": {
+      "description": "Generate a CRUD HTTP service",
+      "factory": "./crud-service/index#crudService"
     }
   }
 }
