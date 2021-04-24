@@ -4,6 +4,11 @@
     "my-schematics": {
       "description": "A blank schematic.",
       "factory": "./my-schematics/index#mySchematics"
+    },
+    "tailwind-container": {
+      "description": "Generate a Tailwind container component",
+      "factory": "./tailwind-container/index#tailwindContainer",
+      "schema": "./tailwind-container/schema.json"
     }
   }
 }
