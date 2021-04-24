@@ -8,6 +8,8 @@ import { Schema } from './schema';
 export function tailwindContainer(_options: Schema): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
     
+    _options.path = _options.path ?? normalize('src/app/' + _options.name as string);
+
     const templateSource = apply(url('./files'), [
       applyTemplates({
         classify: strings.classify,

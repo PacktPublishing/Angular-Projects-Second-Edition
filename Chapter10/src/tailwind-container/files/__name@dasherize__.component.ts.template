@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-<%= dasherize(name) %>-component',
+    selector: 'my-<%= dasherize(name) %>',
     templateUrl: './<%= dasherize(name) %>.component.html'
 })
-export class <%= classify(name) %>Component {}
+export class My<%= classify(name) %>Component {}
