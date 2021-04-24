@@ -21,7 +21,7 @@ export class <%= classify(name) %>Service {
     return this.http.put(this.apiUrl, obj);
   }
 
-  delete(obj) {
-    return this.http.delete(this.apiUrl, obj);
+  delete(id) {
+    return this.http.delete(this.apiUrl + id);
   }
 }
