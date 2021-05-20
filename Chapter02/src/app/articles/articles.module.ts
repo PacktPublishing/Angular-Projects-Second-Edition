@@ -6,7 +6,9 @@ import { ArticlesComponent } from './articles.component';
 
 
 @NgModule({
-  declarations: [ArticlesComponent],
+  declarations: [
+    ArticlesComponent
+  ],
   imports: [
     CommonModule,
     ArticlesRoutingModule
