@@ -1,11 +1,11 @@
 <h3>Report an issue</h3>
-<form clrForm [formGroup]="issueForm" (ngSubmit)="addIssue()">
+<form clrForm *ngIf="issueForm" [formGroup]="issueForm" (ngSubmit)="addIssue()">
   <clr-input-container>
     <label>Title</label>
     <input clrInput formControlName="title" />
     <clr-control-error>Title is required</clr-control-error>
   </clr-input-container>
-  <div class="clr-row" *ngIf="suggestions">
+  <div class="clr-row" *ngIf="suggestions.length">
     <div class="clr-col-lg-2"></div>
     <div class="clr-col-lg-6">
       <clr-stack-view>

@@ -10,9 +10,9 @@ import { IssuesService } from '../issues.service';
 })
 export class IssueReportComponent implements OnInit {
 
-  issueForm: FormGroup;
-  suggestions: Issue[];
   @Output() formClose = new EventEmitter();
+  issueForm: FormGroup | undefined;
+  suggestions: Issue[] = [];
 
   constructor(private builder: FormBuilder, private issueService: IssuesService) { }
 
@@ -30,12 +30,12 @@ export class IssueReportComponent implements OnInit {
   }
 
   addIssue() {
-    if (this.issueForm.invalid) {
+    if (this.issueForm && this.issueForm.invalid) {
       this.issueForm.markAllAsTouched();
       return;
     }
 
-    this.issueService.createIssue(this.issueForm.value);
+    this.issueService.createIssue(this.issueForm?.value);
     this.formClose.emit();
   }
 

@@ -9,9 +9,9 @@ import { IssuesService } from '../issues.service';
 })
 export class IssueListComponent implements OnInit {
 
-  issues: Issue[];
+  issues: Issue[] = [];
   showReportIssue = false;
-  selectedIssue: Issue;
+  selectedIssue: Issue | null = null;
 
   constructor(private issueService: IssuesService) { }
 
@@ -25,14 +25,15 @@ export class IssueListComponent implements OnInit {
   }
 
   onConfirm(confirmed: boolean) {
-    if (confirmed) {
+    if (confirmed && this.selectedIssue) {
       this.issueService.completeIssue(this.selectedIssue);
       this.getIssues();
     }
     this.selectedIssue = null;
   }
 
-  private getIssues(): void {
+  private getIssues() {
     this.issues = this.issueService.getPendingIssues();
   }
+
 }

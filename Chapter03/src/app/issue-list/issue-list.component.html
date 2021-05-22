@@ -24,4 +24,4 @@
   </clr-datagrid>
 </ng-container>
 <app-issue-report *ngIf="showReportIssue == true" (formClose)="onCloseReport()"></app-issue-report>
-<app-confirm-dialog [issueNo]="selectedIssue?.issueNo" (confirm)="onConfirm($event)"></app-confirm-dialog>
+<app-confirm-dialog *ngIf="selectedIssue" [issueNo]="selectedIssue.issueNo" (confirm)="onConfirm($event)"></app-confirm-dialog>
