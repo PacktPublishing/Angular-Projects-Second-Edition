@@ -1,8 +1,5 @@
 export interface Weather {
-  weather: {
-    main: string;
-    icon: string;
-  };
+  weather: WeatherInfo[],
   main: {
     temp: number;
     pressure: number;
@@ -15,4 +12,9 @@ export interface Weather {
     country: string
   };
   name: string;
+}
+
+interface WeatherInfo {
+  main: string;
+  icon: string;
 }

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { Weather } from '../weather';
 import { WeatherService } from '../weather.service';
 
@@ -8,13 +7,16 @@ import { WeatherService } from '../weather.service';
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.scss']
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit {
 
-  weather: Weather;
+  weather: Weather | undefined;
 
   constructor(private weatherService: WeatherService) { }
 
-  search(city: string): void {
+  ngOnInit(): void {
+  }
+
+  search(city: string) {
     this.weatherService.getWeather(city).subscribe(weather => this.weather = weather);
   }
 
