@@ -11,7 +11,7 @@ export class EditorService {
     return this.window.require('electron').ipcRenderer;
   }
 
-  constructor(@Inject(WINDOW) private window: ElectronWindow) {}
+  constructor(@Inject(WINDOW) private window: ElectronWindow) { }
 
   getContent(): Promise<string> {
     return this.ipcRenderer.invoke('getContent');
