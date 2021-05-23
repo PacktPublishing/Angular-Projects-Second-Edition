@@ -2,7 +2,7 @@
   <div class="list-group">
     <a href="https://www.github.com/{{org.login}}" class="list-group-item list-group-item-action" *ngFor="let org of orgs$ | async">
       <div class="row">
-        <img [src]="org.avatar_url" width="40" height="40">
+        <img [src]="org.avatar_url">
         <div class="col-sm-9">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{org.login}}</h5>

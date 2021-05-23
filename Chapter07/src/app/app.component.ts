@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   constructor(private title: Title, private meta: Meta) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.title.setTitle('GitHub portfolio app');
     this.meta.addTags([
       {

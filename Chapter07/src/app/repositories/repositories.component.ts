@@ -11,7 +11,7 @@ import { Repository } from '../repository';
 })
 export class RepositoriesComponent implements OnInit {
 
-  repos$: Observable<Repository[]>;
+  repos$: Observable<Repository[]> | undefined;
 
   constructor(private githubService: GithubService) { }
 

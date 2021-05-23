@@ -10,7 +10,7 @@ import { Organization } from '../organization';
 })
 export class OrganizationsComponent implements OnInit {
 
-  orgs$: Observable<Organization[]>;
+  orgs$: Observable<Organization[]> | undefined;
 
   constructor(private githubService: GithubService) { }
 

@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PanelComponent implements OnInit {
 
-  @Input() caption: string;
-  @Input() icon: string;
+  @Input() caption: string = '';
+  @Input() icon: string = '';
 
   constructor() { }
 

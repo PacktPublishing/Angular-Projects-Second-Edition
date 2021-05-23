@@ -10,7 +10,7 @@ import { User } from '../user';
 })
 export class PersonalInfoComponent implements OnInit {
 
-  user$: Observable<User>;
+  user$: Observable<User> | undefined;
 
   constructor(private githubService: GithubService) { }
 

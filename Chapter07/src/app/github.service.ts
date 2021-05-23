@@ -11,7 +11,7 @@ import { Organization } from './organization';
 })
 export class GithubService {
 
-  private userUrl: string;
+  private userUrl: string = '';
 
   constructor(private http: HttpClient) {
     this.userUrl = `${environment.apiUrl}/users/${environment.username}`;
@@ -28,4 +28,5 @@ export class GithubService {
   getOrganizations(): Observable<Organization[]> {
     return this.http.get<Organization[]>(this.userUrl + '/orgs');
   }
+
 }
