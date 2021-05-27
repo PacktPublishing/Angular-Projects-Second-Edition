@@ -3,13 +3,10 @@ import * as PoiActions from './poi.actions';
 import { State, initialState, reducer } from './poi.reducer';
 
 describe('Poi Reducer', () => {
-  const createPoiEntity = (id: string, name = '') =>
-    ({
-      id,
-      name: name || `name-${id}`,
-    } as PoiEntity);
-
-  beforeEach(() => {});
+  const createPoiEntity = (id: string, name = ''): PoiEntity => ({
+    id,
+    name: name || `name-${id}`,
+  });
 
   describe('valid Poi actions', () => {
     it('loadPoiSuccess should return set the list of known Poi', () => {

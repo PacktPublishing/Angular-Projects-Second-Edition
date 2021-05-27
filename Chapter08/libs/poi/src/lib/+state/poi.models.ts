@@ -3,9 +3,9 @@
  */
 export interface PoiEntity {
   id: string | number; // Primary ID
+  name: string;
   lat: number;
   lng: number;
-  title: string;
   description: string;
   imgUrl: string;
 }

@@ -1,15 +1,8 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import {
-  POI_FEATURE_KEY,
-  State,
-  PoiPartialState,
-  poiAdapter,
-} from './poi.reducer';
+import { POI_FEATURE_KEY, State, poiAdapter } from './poi.reducer';
 
 // Lookup the 'Poi' feature state managed by NgRx
-export const getPoiState = createFeatureSelector<PoiPartialState, State>(
-  POI_FEATURE_KEY
-);
+export const getPoiState = createFeatureSelector<State>(POI_FEATURE_KEY);
 
 const { selectAll, selectEntities } = poiAdapter.getSelectors();
 
@@ -39,5 +32,5 @@ export const getSelectedId = createSelector(
 export const getSelected = createSelector(
   getPoiEntities,
   getSelectedId,
-  (entities, selectedId) => selectedId && entities[selectedId]
+  (entities, selectedId) => (selectedId ? entities[selectedId] : undefined)
 );

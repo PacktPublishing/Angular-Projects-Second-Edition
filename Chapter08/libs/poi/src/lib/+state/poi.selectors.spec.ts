@@ -1,17 +1,17 @@
 import { PoiEntity } from './poi.models';
-import { State, poiAdapter, initialState } from './poi.reducer';
+import { poiAdapter, PoiPartialState, initialState } from './poi.reducer';
 import * as PoiSelectors from './poi.selectors';
 
 describe('Poi Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getPoiId = (it) => it['id'];
+  const getPoiId = (it: PoiEntity) => it.id;
   const createPoiEntity = (id: string, name = '') =>
     ({
       id,
       name: name || `name-${id}`,
     } as PoiEntity);
 
-  let state;
+  let state: PoiPartialState;
 
   beforeEach(() => {
     state = {
@@ -41,7 +41,7 @@ describe('Poi Selectors', () => {
     });
 
     it('getSelected() should return the selected Entity', () => {
-      const result = PoiSelectors.getSelected(state);
+      const result = PoiSelectors.getSelected(state) as PoiEntity;
       const selId = getPoiId(result);
 
       expect(selId).toBe('PRODUCT-BBB');

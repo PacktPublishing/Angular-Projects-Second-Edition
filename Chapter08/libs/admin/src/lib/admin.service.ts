@@ -10,8 +10,9 @@ export class AdminService {
 
   getStatistics(pois: PoiEntity[]): number[] {
     return pois.map(poi => {
-      const stat = localStorage.getItem('tour-' + poi.id);
+      const stat = localStorage.getItem('tour-' + poi.id) ?? 0;
       return +stat;
     });
   }
+
 }

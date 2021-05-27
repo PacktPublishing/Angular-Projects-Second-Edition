@@ -8,9 +8,10 @@ import { PoiEntity } from '..';
 })
 export class PoiService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<PoiEntity[]> {
     return this.http.get<PoiEntity[]>('assets/poi.json');
   }
+
 }

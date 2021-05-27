@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { fetch } from '@nrwl/angular';
-import { map } from 'rxjs/operators';
 
 import * as PoiFeature from './poi.reducer';
 import * as PoiActions from './poi.actions';
+import { map } from 'rxjs/operators';
 import { PoiService } from '../poi.service';
 import { EMPTY } from 'rxjs';
 

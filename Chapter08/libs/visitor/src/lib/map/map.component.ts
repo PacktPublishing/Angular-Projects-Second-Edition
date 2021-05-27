@@ -10,18 +10,17 @@ import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 })
 export class MapComponent implements OnInit {
 
-  @ViewChild(MapInfoWindow) info: MapInfoWindow;
-
   poi$ = this.store.select(PoiSelectors.getSelected);
+  @ViewChild(MapInfoWindow) info: MapInfoWindow | undefined;
 
   constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
 
-  showInfo(marker: MapMarker, poiId: number) {
+  showInfo(marker: MapMarker, poiId: string | number) {
     this.store.dispatch(PoiActions.visitPoi({ poiId }));
-    this.info.open(marker);
+    this.info?.open(marker);
   }
 
 }

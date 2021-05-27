@@ -12,10 +12,9 @@ import { AdminService } from './admin.service';
 })
 export class AdminComponent implements OnInit, OnDestroy {
 
-  private subscription: Subscription;
-
-  data: number[];
-  labels: Label[];
+  private subscription: Subscription | undefined;
+  data: number[] = [];
+  labels: Label[] = [];
 
   constructor(private store: Store, private adminService: AdminService) { }
 
@@ -27,11 +26,12 @@ export class AdminComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.subscription?.unsubscribe();
   }
 
   private buildChart(pois: PoiEntity[]) {
-    this.labels = pois.map(poi => poi.title);
+    this.labels = pois.map(poi => poi.name);
     this.data = this.adminService.getStatistics(pois);
   }
+
 }

@@ -14,6 +14,8 @@ import { ChartsModule } from 'ng2-charts';
     PoiModule,
     ChartsModule
   ],
-  declarations: [AdminComponent],
+  declarations: [
+    AdminComponent
+  ],
 })
 export class AdminModule {}
