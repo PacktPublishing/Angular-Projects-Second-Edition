@@ -1,0 +1,26 @@
+<h3>Edit issue #{{issue?.issueNo}}</h3>
+<form clrForm *ngIf="issueForm" [formGroup]="issueForm" (ngSubmit)="save()">
+  <clr-input-container>
+    <label>Title</label>
+    <input clrInput formControlName="title" />
+    <clr-control-error>Title is required</clr-control-error>
+  </clr-input-container>
+  <clr-textarea-container>
+    <label>Description</label>
+    <textarea clrTextarea formControlName="description"></textarea>
+  </clr-textarea-container>
+  <clr-radio-container clrInline>
+    <label>Priority</label>
+    <clr-radio-wrapper>
+      <input type="radio" value="low" clrRadio formControlName="priority" />
+      <label>Low</label>
+    </clr-radio-wrapper>
+    <clr-radio-wrapper>
+      <input type="radio" value="high" clrRadio formControlName="priority" />
+      <label>High</label>
+    </clr-radio-wrapper>
+    <clr-control-error>Priority is required</clr-control-error>
+  </clr-radio-container>
+  <button class="btn btn-primary" type="submit">Save</button>
+  <button class="btn" (click)="formClose.emit()">Cancel</button>
+</form>
