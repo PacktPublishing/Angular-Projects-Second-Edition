@@ -11,11 +11,11 @@ export class AppComponent {
   title = 'my-components';
   cards: Card[] = assassins;
 
-  onCardChange(cards: Card[]): void {
+  onCardChange(cards: Card[]) {
     console.log(cards);
   }
 
-  log(): void {
+  log() {
     alert(this.title + ' copied to the clipboard');
   }
 }

@@ -1,6 +1,6 @@
 # UiControls
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
 ## Code scaffolding
 

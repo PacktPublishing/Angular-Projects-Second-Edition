@@ -16,7 +16,7 @@ export class AppModule {
 
   constructor(private injector: Injector) {}
 
-  ngDoBootstrap(): void {
+  ngDoBootstrap() {
     const el = createCustomElement(CopyButtonComponent, { injector: this.injector });
     customElements.define('copy-button', el);
   }

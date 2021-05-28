@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CopyButtonComponent implements OnInit {
 
-  @Input() data: string;
+  @Input() data = '';
   @Output() copied = new EventEmitter();
 
   constructor() { }
@@ -15,7 +15,7 @@ export class CopyButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onCopy(): void {
+  onCopy() {
     this.copied.next();
   }
 

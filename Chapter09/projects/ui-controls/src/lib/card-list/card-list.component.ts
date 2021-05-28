@@ -8,7 +8,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit {
-  @Input() cards: Card[];
+  @Input() cards: Card[] = [];
   @Output() cardChange = new EventEmitter<Card[]>();
 
   constructor() { }
