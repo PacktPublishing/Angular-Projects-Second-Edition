@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "johnpapa.angular-essentials",
-    "christian-kohler.path-intellisense",
-    "ms-vscode.vscode-typescript-tslint-plugin"
+    "christian-kohler.path-intellisense"
   ]
 }

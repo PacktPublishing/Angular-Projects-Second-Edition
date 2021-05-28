@@ -16,8 +16,8 @@ export function crudService(_options: any): Rule {
     ]);
 
     return chain([
-			externalSchematic('@schematics/angular', 'service', _options),
-			mergeWith(templateSource, MergeStrategy.Overwrite),
-		]);
+      externalSchematic('@schematics/angular', 'service', _options),
+      mergeWith(templateSource, MergeStrategy.Overwrite)
+    ]);
   };
 }
