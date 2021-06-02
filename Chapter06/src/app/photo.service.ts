@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Camera, CameraResultType, CameraSource, Geolocation } from '@capacitor/core';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { Geolocation } from '@capacitor/geolocation';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Photo } from './photo';
@@ -9,7 +10,12 @@ import { Photo } from './photo';
 })
 export class PhotoService {
 
-  constructor(private firestore: AngularFirestore, private storage: AngularFireStorage) {}
+  constructor(private firestore: AngularFirestore, private storage: AngularFireStorage) { }
+
+  private async getLocation() {
+    const location = await Geolocation.getCurrentPosition();
+    return location.coords;
+  }
 
   async takePhoto() {
     const {latitude, longitude} = await this.getLocation();
@@ -23,11 +29,6 @@ export class PhotoService {
     await this.savePhoto(cameraPhoto.dataUrl, latitude, longitude);
   }
 
-  private async getLocation() {
-    const location = await Geolocation.getCurrentPosition();
-    return location.coords;
-  }
-
   private async savePhoto(dataUrl: string, latitude: number, longitude: number) {
     const name = new Date().getUTCMilliseconds().toString();
     const upload = await this.storage.ref(name).putString(dataUrl, 'data_url');
@@ -39,4 +40,5 @@ export class PhotoService {
       lng: longitude
     });
   }
+
 }
