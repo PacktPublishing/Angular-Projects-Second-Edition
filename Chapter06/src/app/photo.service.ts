@@ -12,11 +12,6 @@ export class PhotoService {
 
   constructor(private firestore: AngularFirestore, private storage: AngularFireStorage) { }
 
-  private async getLocation() {
-    const location = await Geolocation.getCurrentPosition();
-    return location.coords;
-  }
-
   async takePhoto() {
     const {latitude, longitude} = await this.getLocation();
 
@@ -27,6 +22,11 @@ export class PhotoService {
     });
 
     await this.savePhoto(cameraPhoto.dataUrl, latitude, longitude);
+  }
+
+  private async getLocation() {
+    const location = await Geolocation.getCurrentPosition();
+    return location.coords;
   }
 
   private async savePhoto(dataUrl: string, latitude: number, longitude: number) {

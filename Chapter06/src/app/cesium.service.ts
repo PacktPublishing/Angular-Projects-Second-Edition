@@ -18,14 +18,6 @@ export class CesiumService {
     this.viewer = viewer;
   }
 
-  private getPhotos(): Observable<Photo[]> {
-    return this.firestore.collection<Photo>('photos').snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        return a.payload.doc.data() as Photo;
-      }))
-    );
-  }
-
   addPhotos() {
     const pinBuilder = new PinBuilder();
 
@@ -41,6 +33,12 @@ export class CesiumService {
         this.viewer.entities.add(entity);
       });
     });
+  }
+
+  private getPhotos(): Observable<Photo[]> {
+    return this.firestore.collection<Photo>('photos').snapshotChanges().pipe(
+      map(actions => actions.map(a => a.payload.doc.data() as Photo))
+    );
   }
 
 }
