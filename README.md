@@ -45,21 +45,21 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1        | R version 3.3.0                     | Windows, Mac OS X, and Linux (Any) |
-| 2        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 3        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 4        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 5        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 6        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 7        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 8        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 9        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 10        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-|11        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 12        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 13        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 14        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 15        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10       | Angular 12                    | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10        | VSCode            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10        | Scully            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10        | Clarity Design             | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10        | Angular PWA            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10        | Electron           | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10       | Ionic            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10       | CesiumJS           | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10       | Firebase           | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10        |GitHub API           | Windows, Mac OS X, and Linux (Any) |
+|1 to 10        | Nx monorepo tools          | Windows, Mac OS X, and Linux (Any) |
+|1 to 10       | NgRx            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10       | Angular Material          | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10      | Angular CDK            | Windows, Mac OS X, and Linux (Any) |
+| 1 to 10      | Angular schematics          | Windows, Mac OS X, and Linux (Any) |
 
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800205260_ColorImages.pdf).
