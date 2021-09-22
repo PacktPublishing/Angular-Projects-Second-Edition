@@ -15,7 +15,7 @@
   "dependencies": {
     "@angular/common": "~12.0.1",
     "@angular/core": "~12.0.1",
-    "@angular/fire": "^6.1.5",
+    "@angular/fire": "^7.0.4",
     "@angular/forms": "~12.0.1",
     "@angular/platform-browser": "~12.0.1",
     "@angular/platform-browser-dynamic": "~12.0.1",
@@ -29,14 +29,15 @@
     "@capacitor/keyboard": "1.0.0",
     "@ionic/angular": "^5.5.2",
     "cesium": "^1.82.1",
-    "firebase": "^7.0 || ^8.0",
+    "firebase": "^9.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "rxfire": "^6.0.0"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "^12.0.0",
-    "@angular-devkit/architect": ">= 0.900 < 0.1300",
+    "@angular-devkit/architect": "^0.1200.0",
     "@angular-devkit/build-angular": "~12.0.1",
     "@angular-eslint/builder": "~12.0.0",
     "@angular-eslint/eslint-plugin": "~12.0.0",
@@ -57,7 +58,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
-    "firebase-tools": "^8.0.0 || ^9.0.0",
+    "firebase-tools": "^9.0.0",
     "fuzzy": "^0.1.3",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",

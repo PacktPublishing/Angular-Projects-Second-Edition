@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Cartesian3, Color, PinBuilder, Viewer } from 'cesium';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
