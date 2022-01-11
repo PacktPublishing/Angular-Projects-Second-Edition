@@ -41,6 +41,10 @@ If you are a developer who has beginner-level experience with Angular and are lo
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
 
+## Errata
+
+* Page 246: In Configuring the state section, the command "nx generate ngrx app --root --no-interactive --project=tour --module=apps/tour/src/app/app.module.ts" must be read as "nx generate ngrx app --root --no-interactive --module=apps/tour/src/app/app.module.ts".
+
 ### Software and Hardware List
 
 | Chapter  | Software required                   | OS required                        |
