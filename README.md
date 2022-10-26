@@ -76,3 +76,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ## Get to Know the Author
 **Aristeidis Bampakos**
 is an experienced frontend web developer and a Google Developer Expert for the Angular framework. From 2011, he has mainly focused on developing applications with AngularJS and Angular frameworks, Typescript, and Angular Material. He is currently working at Plex-Earth where he specializes in Angular development and also works as an Angular Senior Tech Instructor for Code.Hub where he teaches the Angular framework to other developers and individuals.	
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781800205260">https://packt.link/free-ebook/9781800205260 </a> </p>
